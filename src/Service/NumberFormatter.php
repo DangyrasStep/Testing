@@ -14,10 +14,11 @@ class NumberFormatter
      * @param $number
      * @return string
      */
-    public function formatNumber($number) : String
+    public function formatNumber($number): String
     {
         $abs = abs($number);
-        if($number < 0) {
+        if ($number < 0) {
+
             $symbol = '-';
         } else {
             $symbol = '';
@@ -32,8 +33,8 @@ class NumberFormatter
         if ($abs >= 1000 && $abs < 99950) {
             return $symbol . number_format(round($abs, 0), 0, '', ' ');
         }
-        if (round($abs,0) === round($abs, 2)){
-            return $symbol . number_format(round($abs,0), 0, '', ' ');
+        if (round($abs, 0) === round($abs, 2)) {
+            return $symbol . number_format(round($abs, 0), 0, '', ' ');
         }
 
         return $symbol . number_format(round($abs, 2), 2);
