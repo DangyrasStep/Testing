@@ -8,7 +8,6 @@
 
 namespace App\Service;
 
-
 class DativeConverter
 {
     public function convert($name)
