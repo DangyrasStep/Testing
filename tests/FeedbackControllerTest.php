@@ -15,4 +15,17 @@ class FeedbackControllerTest extends WebTestCase
 
     }
 
+    public function testLink()
+    {
+        $client = static::createClient();
+
+
+        $crawler = $client->request('GET', '/');
+        $link = $crawler->filter('#button')->link();
+
+        $page = $client->click($link);
+        echo $page->text();
+        $this->assertSame(1, $page->filter('#red')->count());
+    }
+
 }
