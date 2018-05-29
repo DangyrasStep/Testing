@@ -23,6 +23,6 @@ class DefaultController extends Controller
     {
         $name = "Oleg";
         $dative = $this->container->get(DativeConverter::class)->convert($name);
-        return new Response($name. "=>" . $dative);
+        return new Response($name . "=>" . $dative);
     }
 }
