@@ -8,7 +8,6 @@
 
 namespace App\Controller;
 
-
 use App\Service\DativeConverter;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
