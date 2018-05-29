@@ -3,7 +3,6 @@
 
 namespace App\Service;
 
-
 class Mailer
 {
     /**
@@ -18,3 +17,4 @@ class Mailer
         return null;
     }
 }
+
