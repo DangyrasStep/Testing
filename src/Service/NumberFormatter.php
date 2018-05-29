@@ -17,9 +17,7 @@ class NumberFormatter
     public function formatNumber($number): String
     {
         $abs = abs($number);
-        
         if ($number < 0) {
-
             $symbol = '-';
         } else {
             $symbol = '';
