@@ -30,7 +30,7 @@ before_install:
 install:
   - cd $TRAVIS_BUILD_DIR && composer install --no-interaction --prefer-dist
   - cd $TRAVIS_BUILD_DIR && yarn
-  - cd $TRAVIS_BUILD_DIR/acceptance-tests && composer install
+  - cd $TRAVIS_BUILD_DIR/acceptance_tests && composer install
 
 before_script:
   - cd $TRAVIS_BUILD_DIR && yarn run encore production
@@ -39,7 +39,7 @@ before_script:
 script:
   - cd $TRAVIS_BUILD_DIR && vendor/bin/phpcs -p --standard=PSR2 --extensions=php ./src
   - cd $TRAVIS_BUILD_DIR && bin/phpunit
-  - cd $TRAVIS_BUILD_DIR/acceptance-tests && vendor/bin/codecept run --debug
+  - cd $TRAVIS_BUILD_DIR/acceptance_tests && vendor/bin/codecept run --debug
 
 after_failure:
-  - tail -n 5000 $TRAVIS_BUILD_DIR//acceptance-tests/tests/_output/*
+  - tail -n 5000 $TRAVIS_BUILD_DIR//acceptance_tests/_output/*
